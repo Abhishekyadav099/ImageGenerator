@@ -46,9 +46,7 @@ const jwt = require('jsonwebtoken');
 const imageRouter = require('./routes/imageRouter');
 const authRouter = require('./routes/authRouter');
 const contactRouter = require('./routes/contactRoutes'); 
-
-const app = express();
-app.use('/images', express.static(path.join(__dirname, "/uploads")));
+require('dotenv').config();
 
 app.use(cors({ origin: true }));
 app.use(express.json());
